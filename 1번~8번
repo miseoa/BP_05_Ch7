@@ -1,0 +1,153 @@
+1번
+import turtle
+t=turtle.Turtle()
+t.shape("turtle")
+t.color("black","white")
+s=turtle.Screen(); s.bgcolor("skyblue");
+def draw_snowman(x,y):
+    t.up()
+    t.goto(x,y)
+    t.down()
+    t.begin_fill()
+    t.circle(20)
+    t.end_fill()
+    t.goto(x,y-25)
+    t.setheading(135)
+    t.forward(50)
+    t.backward(50)
+    t.setheading(30)
+    t.forward(50)
+    t.backward(50)
+    t.setheading(0)
+    t.begin_fill()
+    t.circle(15)
+    t.end_fill()
+    t.goto(x,y-70)
+    t.begin_fill()
+    t.circle(30)
+    t.end_fill()
+draw_snowman(0,0)
+draw_snowman(100,0)
+draw_snowman(200,0)
+
+2번
+import turtle
+t=turtle.Turtle()
+t.shape("turtle")
+t.speed(0)
+
+def hexagon():
+    for i in range(6):
+        turtle.forward(100)
+        turtle.left(360/6)
+
+        
+for i in range(6):
+    hexagon()
+    turtle.forward(100)
+    turtle.right(60)
+
+3번
+import turtle
+t=turtle.Turtle()
+t.shape("turtle")
+t.fd(300)
+t.fd(-300)
+t.lt(90)
+t.fd(300)
+t.fd(-300)
+t.rt(90)
+def f():
+    for x in range(0,151):
+        y=(x**2+1)*0.01
+        t.goto(x,y)
+
+        
+f()
+
+4번
+import turtle
+t=turtle.Turtle()
+t.shape("turtle")
+t.speed(0)
+def draw_line():
+    t.forward(100)
+    t.backward(100)
+
+    
+for x in range(12):
+    t.right(30)
+    draw_line()
+
+5번
+def happyBirthday(person):
+    print("HAPPY BIRTHDAY TO YOU!")
+    print("HAPPY BIRTHDAY TO YOU!")
+    print("HAPPY BIRTHDAY, DEAR"+person)
+    print("HAPPY BIRTHDAY TO YOU!")
+
+    
+happyBirthday("조민서")
+HAPPY BIRTHDAY TO YOU!
+HAPPY BIRTHDAY TO YOU!
+HAPPY BIRTHDAY, DEAR조민서
+HAPPY BIRTHDAY TO YOU!
+
+6번
+def sumProblem(x,y):
+    sum=x+y
+    sentence="정수"+str(x)+"+"+str(y)+"의 합은?"
+    print(sentence)
+
+    
+def main():
+    a=int(input("첫 번째 정수:"))
+    b=int(input("두 번째 정수:"))
+    sumProblem(a,b)
+
+    
+main()
+첫 번째 정수:20
+두 번째 정수:30
+정수20+30의 합은?
+
+7번
+PI=3.14159265358979
+
+def circleArea(radius):
+    return PI*radius*radius
+
+def circleCircumference(radius):
+    return 2*PI*radius
+
+def main():
+    print("반지름이 5인 원의 면적", circleArea(5))
+    print("반지름이 5인 원의 둘레", circleCircumference(5))
+
+    
+main()
+반지름이 5인 원의 면적 78.53981633974475
+반지름이 5인 원의 둘레 31.4159265358979
+
+8번
+def add(a,b):
+    print("(%d+%d)"%(a,b),end="")
+    return a+b
+
+def subtract(a,b):
+    print("%d-%d)"%(a,b),end="")
+    return a-b
+
+def multiply(a,b):
+    print("(%d*%d)"%(a,b),end="")
+    return a*b
+
+def divide(a,b):
+    print("(%d/%d)"%(a,b),end="")
+    return a/b
+
+what=add(20,10)
+(20+10)
+print("=", what)
+= 30
+
